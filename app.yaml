@@ -1,0 +1,58 @@
+application: tech-trends
+version: version-0-0
+runtime: python27
+api_version: 1
+threadsafe: false
+
+libraries:
+- name: PIL
+  version: latest
+- name: django
+  version: 1.3
+
+
+builtins:
+- remote_api: on
+ 
+handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+
+- url: /javascript
+  static_dir: javascript
+
+- url: /favicon\.ico
+  static_files: static/images/favicon.ico
+  upload: static/images/favicon\.ico
+
+- url: /apple-touch-icon-114x114-precomposed\.png
+  static_files: static/images/apple-touch-icon-72x72-precomposed.png
+  upload: static/images/apple-touch-icon-72x72-precomposed\.png
+
+- url: /apple-touch-icon-72x72-precomposed\.png
+  static_files: static/images/apple-touch-icon-72x72-precomposed.png
+  upload: static/images/apple-touch-icon-72x72-precomposed\.png
+
+- url: /apple-touch-icon-57x57-precomposed\.png
+  static_files: static/images/apple-touch-icon-72x72-precomposed.png
+  upload: static/images/apple-touch-icon-72x72-precomposed\.png
+
+- url: /images
+  static_dir: images
+
+- url: /admin/.*
+  script: main.py
+  login: admin
+
+- url: /subscribe/.*
+  script: main.py
+  login: required
+
+- url: ./info/.*
+  script: main.py
+
+- url: ./help/.*
+  script: main.py
+
+- url: .*
+  script: main.py

@@ -1,0 +1,105 @@
+{% block head_tag %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width; height=device-height; maximum-scale=1.4; initial-scale=1.0; user-scalable=yes"/>
+<meta content="Paul J Palmer p.j.palmer@tech-trends.co.uk" name="author" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57x57-precomposed.png" />
+<link rel="stylesheet" href="/stylesheets/app_2012_jan_v2.css" type="text/css" />
+{% endblock %}
+{% block head_tags_extra %}<meta name="description" content="Q-Action: Low cost, mobile friendly, programmable QR Codes for everyone" />{% endblock %}
+
+{% block javascript_tag %}{% endblock %}
+<!-- Uncomment this to include Google analytics
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28274208-1']);
+  _gaq.push(['_setDomainName', 'q-action.appspot.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+-->
+<title> {% block title %}{{ pageTitle }}{% endblock %} </title> 
+</head> 
+
+<body  {% block body_tag %} {% endblock %} > 
+<div class="page">
+
+
+{% block logon %}
+{% endblock %}
+
+{% block banner_tag %} 
+<div class="banner_container">
+
+{% if logon_message == "You will need to sign in with a valid gmail account to use this software." %}
+	{% autoescape off %}<div class="login"><a class="login" href="{{login_url|fix_ampersands}}">Login or Register</a>{% endautoescape %}
+	<div class="banner_image"></div>
+	<div class="banner_text_image"></div>	
+
+	</div>
+{% endif %}
+
+{% if logon_message != "You will need to sign in with a valid gmail account to use this software." %}
+{% autoescape off %}	
+<div > {{logon_message|fix_ampersands}} <a class="link_text" href="/my_account.html">{{user_nickname_or_url|fix_ampersands}} </a><br />
+</div> {% endautoescape %}
+<!--	<div class="banner_image_small"></div> -->
+
+{% endif %}
+</div>
+ <img class="banner_line_img" src="/images/line_1.png" alt="line" /> 
+{% endblock %}
+
+
+
+
+<div class="card">
+{% block main-menu %}
+<div class="main-menu">
+	<ul class = "nav">
+	<li><a href="/">Home</a></li>	
+	</ul>
+ </div>
+
+
+<div> </div>
+{% if logon_message != "You will need to sign in with a valid gmail account to use this software." %}	
+<div class="black-menu">
+	<ul class = "nav">
+	<li><a href="/">Client Website</a></li>
+	</ul>
+ </div>
+{% endif %}
+{% endblock %}
+
+{% block page_heading %}<h1>{{ pageTitle }}</h1>{% endblock %}
+
+
+	{% block content %}{% endblock %}
+</div>
+
+
+<div class="footer"> 
+
+{% block footer %}
+
+{% endblock %}
+</div>
+<div class="page-bottom"> 
+
+
+</div>
+
+
+</body></html>
