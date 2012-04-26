@@ -17,6 +17,7 @@ background: white;
 background-image: url('/images/drop_shadow.png');
 background-repeat:no-repeat;
 background-position: right bottom; 
+
 float: left;
 line-height: 0;
 margin-left: 20px;
@@ -45,7 +46,8 @@ margin-top: 5px;
 
 div.banner_image {
  /*background-image: url('/images/clapboard_5.png');*/
- background-image: url('/images/q_logo_v2.png');
+ background-image: url('/images/Tech-Trends-web.jpeg');
+background-repeat:no-repeat;
  width: 200px;
  height:200px;
 float:left;
