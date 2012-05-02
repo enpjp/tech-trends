@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}{{ pageTitle }}{% endblock %}
+
+
+
+{% block page_heading %}<h1>Westoe Farm</h1>{% endblock %}
+{% block content %}
+
+<h2>Page Not Found On The Westoe Farm Development Server</h2>
+<p>The URL I was looking for was:</p>
+{{ my_url }}
+<p>The path I was looking for was:</p>
+{{ my_path }}
+
+<p>My clean path was:</p>
+
+{{ my_clean_path }}
+
+
+
+{% endblock %}

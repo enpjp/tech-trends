@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width; height=device-height; maximum-scale=1.4; initial-scale=1.0; user-scalable=yes"/>
 <meta content="Paul J Palmer p.j.palmer@tech-trends.co.uk" name="author" />
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" href="/stylesheets/app_2012_jan_v2.css" type="text/css" />
+<link rel="stylesheet" href="/westoefarm.co.uk/stylesheets/westoefarm.css" type="text/css" />
 
 {% endblock %}
 {% block head_tags_extra %}<meta name="description" content="Q-Action: Low cost, mobile friendly, programmable QR Codes for everyone" />{% endblock %}
@@ -31,61 +31,42 @@
 </head> 
 
 <body  {% block body_tag %} {% endblock %} > 
-<div class="page">
 
+<div class="page">
 
 {% block logon %}
 {% endblock %}
 
 {% block banner_tag %} 
 <div class="banner_container">
-
-{% if logon_message == "You will need to sign in with a valid gmail account to use this software." %}
-	{% autoescape off %}<div class="login"><a class="login" href="{{login_url|fix_ampersands}}">Login or Register</a>{% endautoescape %}
 	<div class="banner_image"></div>
-	<div class="banner_text_image"></div>	
+	<div class="banner_text_image"><a href="http://www.farmstay.co.uk"><img src="/westoefarm.co.uk/images/farmstaysm.png" alt="Farmstay Logo" width="71" height="75" border="0" /></a></div>
+	<div class="banner_text_image"><img src="images/silver.gif" alt="Silver Award" width="52" height="75" /></div>
+	<div class="banner_text_image"><img src="images/5starBB.gif" alt="5 Star Award" width="52" height="75" /></div>
+	<div class="banner_text_image"><img src="images/BreakfastAward_1.gif" alt="Breakfast Award" width="52" height="75" /></div>
+	<div class="banner_text_image"><a href="http://www.sawdays.co.uk/index.php?affID=pp58953"><img src="images/sawdays.gif" alt="Sawdays" width="139" height="54" border="0" /></a></div>
+	<div class="banner_text_image"><a href="http://www.wolseylodges.co.uk"><img src="images/wl_logosmall.png" alt="Wolsey Lodges" width="150" height="32" border="0" align="bottom" /></a></div>
 
-	</div>
-{% endif %}
-
-{% if logon_message != "You will need to sign in with a valid gmail account to use this software." %}
-{% autoescape off %}	
-<div > {{logon_message|fix_ampersands}} <a class="link_text" href="/my_account.html">{{user_nickname_or_url|fix_ampersands}} </a><br />
-</div> {% endautoescape %}
-<!--	<div class="banner_image_small"></div> -->
-
-{% endif %}
 </div>
- <img class="banner_line_img" src="/images/line_1.png" alt="line" /> 
+
 {% endblock %}
 
-
-
-
-<div class="card">
 {% block main-menu %}
 <div class="main-menu">
 	<ul class = "nav">
-	<li><a href="/">Home</a></li>	
+	<li><a href="/westoefarm.co.uk/index.htm">Home</a></li>
+	<li><a href="/westoefarm.co.uk/Bedrooms.htm">Bedrooms</a></li>	
+	<li><a href="/westoefarm.co.uk/Directions.htm">Directions</a></li>	
+	<li><a href="/westoefarm.co.uk/Prices.htm">Prices</a></li>	
+	<li><a href="/westoefarm.co.uk/TheFarm.htm">The Farm</a></li>	
+	<li><a href="/westoefarm.co.uk/ContactUs.htm">Contact Us</a></li>		
 	</ul>
  </div>
-
-
-<div> </div>
-{% if logon_message != "You will need to sign in with a valid gmail account to use this software." %}	
-<div class="black-menu">
-	<ul class = "nav">
-	<li><a href="/westoefarm.co.uk/index.htm">Westoe Farm</a></li>
-	</ul>
- </div>
-{% endif %}
 {% endblock %}
 
+
 {% block page_heading %}<h1>{{ pageTitle }}</h1>{% endblock %}
-
-
 	{% block content %}{% endblock %}
-</div>
 
 
 <div class="footer"> 
@@ -93,11 +74,13 @@
 {% block footer %}
 
 {% endblock %}
-</div>
+
+
 <div class="page-bottom"> 
-
-
+<a class = "page-link" href ="\" >Back to server</a>
 </div>
 
 
+</div> <!-- end of page div -->
+<div class = "footer_image"></div>
 </body></html>

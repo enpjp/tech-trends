@@ -34,6 +34,8 @@ class MainHandler(webapp.RequestHandler):
 
 def main():
     application = webapp.WSGIApplication([('/', HomePage),
+						('/index.*', HomePage),
+						('/westoefarm.co.uk/.*.htm', Westoefarm),
 
 							],
                                          debug=True)
