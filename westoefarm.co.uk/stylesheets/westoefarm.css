@@ -1,17 +1,23 @@
-
+/* http://colorschemedesigner.com/#1K32poYjYw0w0 */
 
 body {
   font-family: Arial,Helvetica,sans-serif;
   font-size: 20px;
   color: black;
  /*background-image: url('/images/clouds5.jpg');*/
- background: #c6baa1;
+ background: #23394D;
 }
 
 div.page {
 max-width: 1400px;
 background: white;
 padding: 10px;
+}
+
+h1,
+h2,
+h2 {
+text-transform:uppercase;
 }
 
 .img_wrapper {
@@ -32,7 +38,6 @@ clear: both;
 }
 
 
-
 img.business_card_image {
 width: 200px;
 padding: 4px;
@@ -50,29 +55,30 @@ background: white;
 div.banner_image {
  /*background-image: url('/images/clapboard_5.png');*/
  background-image: url('/westoefarm.co.uk/images/Westoe_Farm_New1.png');
+margin-left: -11px;
 background-repeat:no-repeat;
  width: 825px;
  height: 380px;
 float:left;
 /*border-bottom: 5px solid #999999;*/
 }
-/*
-img.banner_line_img {
- width: 100%;
-  height:5px;
-border-bottom: 5px solid #999999;
-}*/
+
 
 div.footer_image {
  /*background-image: url('/images/clapboard_5.png');*/
- background-image: url('/westoefarm.co.uk/images/Westoe_Farm_New1.png');
+ background-image: url('/westoefarm.co.uk/images/westoe_footer.png');
 background-repeat:no-repeat;
- width: 825px;
- height: 380px;
-float:left;
+/*width: 1992px;*/
+height: 200px;
+overflow:hidden;
 /*border-bottom: 5px solid #999999;*/
 }
 
+div.footer_text {
+  color: white;
+  float: right;
+  margin: 10px;
+}
 
 
 div.main-menu {
@@ -99,9 +105,17 @@ img.banner_line_img_landing {
 div.banner_text_image {
 float:left;
 margin: 10px;
-
-
+height:100px;
+min-width:60px;
 }
+
+div.banner_text {
+float:left;
+margin: 10px;
+min-height:100px;
+min-width:500px;
+}
+
 
 
 
@@ -139,13 +153,13 @@ float: left;
 a.link_text {
 text-decoration: none;
 font-weight: bold;
-color: #fab019;
+color: #6C90B3;
 
 }
 
 a.link_text:hover{
 
-color: #4d5364;
+color: #CB7480;
 
 }
 
@@ -163,7 +177,7 @@ padding: 0 20px;
 /*border-top: 1px solid #b2b2b2;*/
 line-height: 50px;
 text-decoration: none;
-width: 220px;
+width: 150px;
 font-size:25px;
 text-align:center;
 cursor:pointer;
@@ -205,7 +219,7 @@ a.url,
 a.email
 {
 color: #ffffff;
-background: #15213e;
+background: #67620B;
 margin-bottom: 5px;
 margin-right: 5px;
 }
@@ -400,6 +414,9 @@ float: left;
 
 }
 
+div.awards {
+background: #ffffff;
+}
 
 
 div.vcard_enclosure {

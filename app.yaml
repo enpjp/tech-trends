@@ -16,7 +16,21 @@ builtins:
  
 handlers:
 
+- url: /favicon\.ico
+  static_files: static/images/favicon.ico
+  upload: static/images/favicon\.ico
 
+- url: /apple-touch-icon-114x114-precomposed\.png
+  static_files: static/images/apple-touch-icon-72x72-precomposed.png
+  upload: static/images/apple-touch-icon-72x72-precomposed\.png
+
+- url: /apple-touch-icon-72x72-precomposed\.png
+  static_files: static/images/apple-touch-icon-72x72-precomposed.png
+  upload: static/images/apple-touch-icon-72x72-precomposed\.png
+
+- url: /apple-touch-icon-57x57-precomposed\.png
+  static_files: static/images/apple-touch-icon-72x72-precomposed.png
+  upload: static/images/apple-touch-icon-72x72-precomposed\.png
 
 
 - url: /stylesheets

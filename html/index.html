@@ -13,4 +13,12 @@
 <p>If you are not a client there is not much to see as all work is password protected using the Google sign-on.</p>
 <p> If you are a client and can&apos;t see your site after you have signed on then we have not yet added your account to the white list. Drop us a line and we will put that right as soon as possible.</p>
 
+{% if logon_message != "You will need to sign in with a valid gmail account to use this software." %}
+<p>You have access to the following client websites using the menu at the head of this page:</p>
+<ol>
+{% for account in accounts_enabled %}
+<li>{{ account }}</li>
+{% endfor %}
+</ol>
+{% endif %}
 {% endblock %}

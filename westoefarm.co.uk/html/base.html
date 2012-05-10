@@ -7,7 +7,8 @@
 <link rel="stylesheet" href="/westoefarm.co.uk/stylesheets/westoefarm.css" type="text/css" />
 
 {% endblock %}
-{% block head_tags_extra %}<meta name="description" content="Q-Action: Low cost, mobile friendly, programmable QR Codes for everyone" />{% endblock %}
+<title> {% block title %}{{ pageTitle }}{% endblock %} </title> 
+{% block head_tags_extra %}<meta name="description" content="page description" />{% endblock %}
 
 {% block javascript_tag %}{% endblock %}
 <!-- Uncomment this to include Google analytics
@@ -27,7 +28,6 @@
 
 </script>
 -->
-<title> {% block title %}{{ pageTitle }}{% endblock %} </title> 
 </head> 
 
 <body  {% block body_tag %} {% endblock %} > 
@@ -38,30 +38,34 @@
 {% endblock %}
 
 {% block banner_tag %} 
-<div class="banner_container">
-	<div class="banner_image"></div>
-	<div class="banner_text_image"><a href="http://www.farmstay.co.uk"><img src="/westoefarm.co.uk/images/farmstaysm.png" alt="Farmstay Logo" width="71" height="75" border="0" /></a></div>
-	<div class="banner_text_image"><img src="images/silver.gif" alt="Silver Award" width="52" height="75" /></div>
-	<div class="banner_text_image"><img src="images/5starBB.gif" alt="5 Star Award" width="52" height="75" /></div>
-	<div class="banner_text_image"><img src="images/BreakfastAward_1.gif" alt="Breakfast Award" width="52" height="75" /></div>
-	<div class="banner_text_image"><a href="http://www.sawdays.co.uk/index.php?affID=pp58953"><img src="images/sawdays.gif" alt="Sawdays" width="139" height="54" border="0" /></a></div>
-	<div class="banner_text_image"><a href="http://www.wolseylodges.co.uk"><img src="images/wl_logosmall.png" alt="Wolsey Lodges" width="150" height="32" border="0" align="bottom" /></a></div>
+	<div class="banner_container">
+		<div class="banner_image"></div>
+		<div class="banner_text"><h1>Westoe Farm</h1><address> Luxury 5 star Bed &amp; Breakfast Accomodation,<br /> 01223 892731 or 07779 258666<br /> enquire@bartlow.u-net.com</address></div>
+		<div class="banner_text_image"><a href="http://www.farmstay.co.uk"><img src="/westoefarm.co.uk/images/farmstaysm.png" alt="Farmstay Logo" width="71" height="75" /></a></div>
+		<div class="banner_text_image"><img src="images/silver.gif" alt="Silver Award" width="52" height="75" /></div>
+		<div class="banner_text_image"><img src="images/5starBB.gif" alt="5 Star Award" width="52" height="75" /></div>
+		<div class="banner_text_image"><img src="images/BreakfastAward_1.gif" alt="Breakfast Award" width="52" height="75" /></div>
+		<div class="banner_text_image"><a href="http://www.sawdays.co.uk/index.php?affID=pp58953"><img src="images/sawdays.gif" alt="Sawdays" width="139" height="54" /></a></div>
+		<div class="banner_text_image"><a href="http://www.wolseylodges.co.uk"><img src="images/wl_logosmall.png" alt="Wolsey Lodges" width="150" height="32" /></a></div>
 
-</div>
+
+
+
+	</div>
 
 {% endblock %}
 
 {% block main-menu %}
-<div class="main-menu">
-	<ul class = "nav">
-	<li><a href="/westoefarm.co.uk/index.htm">Home</a></li>
-	<li><a href="/westoefarm.co.uk/Bedrooms.htm">Bedrooms</a></li>	
-	<li><a href="/westoefarm.co.uk/Directions.htm">Directions</a></li>	
-	<li><a href="/westoefarm.co.uk/Prices.htm">Prices</a></li>	
-	<li><a href="/westoefarm.co.uk/TheFarm.htm">The Farm</a></li>	
-	<li><a href="/westoefarm.co.uk/ContactUs.htm">Contact Us</a></li>		
-	</ul>
- </div>
+	<div class="main-menu">
+		<ul class = "nav">
+		<li><a href="/westoefarm.co.uk/index.htm">Home</a></li>
+		<li><a href="/westoefarm.co.uk/TheFarm.htm">The Farm</a></li>	
+		<li><a href="/westoefarm.co.uk/Bedrooms.htm">Bedrooms</a></li>	
+		<li><a href="/westoefarm.co.uk/Prices.htm">Prices</a></li>
+		<li><a href="/westoefarm.co.uk/Directions.htm">Directions</a></li>		
+		<li><a href="/westoefarm.co.uk/ContactUs.htm">Contact Us</a></li>		
+		</ul>
+	 </div>
 {% endblock %}
 
 
@@ -69,18 +73,39 @@
 	{% block content %}{% endblock %}
 
 
-<div class="footer"> 
+	<div class="footer"> 
 
-{% block footer %}
+	{% block footer %}
+		<div class = "footer_image">
+			<div class = "footer_text"> 
+				Tim &amp; Henrietta Breitmeyer<br/>
+				Westoe Farm<br/>
+				Bartlow<br/>
+				Cambs<br/>
+				CB21 4PR<br/>
+				Tel/Fax 01223 892731<br/>
+				Mobile 07776258666<br/>
+			</div>
+		
 
-{% endblock %}
+		</div>
+	{% endblock %}
+
+	</div>
 
 
+
+
+
+
+
+ </div><!-- end of page div -->
 <div class="page-bottom"> 
-<a class = "page-link" href ="\" >Back to server</a>
+<p><a class = "link_text" href ="\" >Back to server</a></p>
+ <p>
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+  </p>
+  
 </div>
-
-
-</div> <!-- end of page div -->
-<div class = "footer_image"></div>
 </body></html>

@@ -124,7 +124,10 @@ class Westoefarm(webapp.RequestHandler):
 
 	pageTitle= 'Westeo Farm'
 	template_values  = {'pageTitle': pageTitle }
-
+	template_values.update(logon_check(self))
+	accounts_enabled = template_values['accounts_enabled']
+	if 'westoefarm.co.uk' not in accounts_enabled:
+		self.redirect( '/')
 	my_url = self.request.url
 	my_path = self.request.path
 	# trim off the leading slash and info.
@@ -204,12 +207,36 @@ def logon_check(self):
 	    user_nickname_or_url = """<a class= "login" href="%s">Login or Register</a>""" % login_url
 ## end user control ---------------------------------------------------------------
 
+
+	if user:
+		user_email = user.email()
+		user_white_list = {
+
+		'email_address': user_email,
+		'paul.j.palmer@tech-trends.co.uk': ['westoefarm.co.uk'],
+		'test@example.com': ['westoefarm.co.uk']
+		}
+
+	else:
+		user_email = 'not signed in'
+
+		user_white_list = {
+
+		'email_address': user_email ,
+		}
+
+	if user_email in user_white_list :
+		accounts_enabled = user_white_list[user_email]
+	else:
+		accounts_enabled = ['none assigned to this user']
+
         template_values = {
 
 		'login_url' : login_url,
 		'logout_url' : logout_url,
 		'logon_message' : logon_message,
 		'user_nickname_or_url' : user_nickname_or_url,
+		'accounts_enabled' : accounts_enabled
     
         }
 
